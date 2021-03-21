@@ -20,3 +20,9 @@ spring:
     url: jdbc:mysql://localhost:3306/crud?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC
     username: manualepson
     password: Manual@epson07
+
+
+crud:
+  rabbitmq:
+    exchange: crud.exchange
+    routingkey: crud.produto.routingkey
