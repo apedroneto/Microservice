@@ -1,6 +1,8 @@
 package com.pedro.pagamento.entity;
 
+import com.pedro.pagamento.vo.ProdutoVO;
 import lombok.*;
+import org.modelmapper.ModelMapper;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,5 +25,9 @@ public class Produto implements Serializable {
 
     @Column(name = "estoque", nullable = false, length = 10)
     private Integer estoque;
+
+    public static Produto create(ProdutoVO produtoVO) {
+        return new ModelMapper().map(produtoVO, Produto.class);
+    }
 
 }

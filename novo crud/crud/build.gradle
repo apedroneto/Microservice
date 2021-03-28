@@ -35,6 +35,9 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml
 	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.12.2'
 	implementation 'org.springframework.boot:spring-boot-starter-amqp'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 }
 
 test {

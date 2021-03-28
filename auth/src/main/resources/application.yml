@@ -1,11 +1,11 @@
 server:
-  port: 8081
+  port: 8083
   servlet:
-    context-path: /crud
+    context-path: /auth
 
 spring:
   application:
-    name: crud
+    name: auth
   jpa:
     show-sql: false
     hibernate:
@@ -17,23 +17,13 @@ spring:
   jmx:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost:3306/crud?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/auth?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC
     username: manualepson
     password: Manual@epson07
-
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: admin
-    password: admin
-
-crud:
-  rabbitmq:
-    exchange: crud.exchange
-    routingkey: crud.produto.routingkey
 
 
 security:
   jwt:
     token:
       secret-key: chave_microservices
+      expire-length: 360000
